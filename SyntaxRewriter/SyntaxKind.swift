@@ -12,7 +12,7 @@ enum SyntaxKind: Equatable {
     case base(_ baseKind: Base)
     case kind(_ identifier: String)
     
-    /// Returns the crossponeding String of a SwiftKind, checking to see if the kind is
+    /// Returns the corresponding String of a SwiftKind, checking to see if the kind is
     /// Syntax or SyntaxCollection First.
     /// A type name is the same as the SyntaxKind name with the suffix "Syntax" added.
     var type: String {

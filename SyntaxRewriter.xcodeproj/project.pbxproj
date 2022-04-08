@@ -16,6 +16,7 @@
 		EF930C5D2800C7E00010A81C /* FunctionSignatureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */; };
 		EF930C602800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */; };
 		EF930C612800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EF930C642800E0310010A81C /* ReturnStmtConvenienceInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF930C632800E0310010A81C /* ReturnStmtConvenienceInitializers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		EF1C422E27FE571C001609BC /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
 		EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionSignatureHelper.swift; sourceTree = "<group>"; };
 		EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = lib_InternalSwiftSyntaxParser.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/lib_InternalSwiftSyntaxParser.dylib; sourceTree = DEVELOPER_DIR; };
+		EF930C632800E0310010A81C /* ReturnStmtConvenienceInitializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnStmtConvenienceInitializers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1C421E27FE53CA001609BC /* main.swift */,
+				EF930C632800E0310010A81C /* ReturnStmtConvenienceInitializers.swift */,
 				EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */,
 				EF1C422C27FE56FD001609BC /* Node.swift */,
 				EF1C422E27FE571C001609BC /* Kind.swift */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF930C642800E0310010A81C /* ReturnStmtConvenienceInitializers.swift in Sources */,
 				EF930C5D2800C7E00010A81C /* FunctionSignatureHelper.swift in Sources */,
 				EF1C421F27FE53CA001609BC /* main.swift in Sources */,
 				EF1C422D27FE56FD001609BC /* Node.swift in Sources */,

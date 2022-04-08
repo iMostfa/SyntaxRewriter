@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EF1C421F27FE53CA001609BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C421E27FE53CA001609BC /* main.swift */; };
+		EF1C422727FE556E001609BC /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = EF1C422627FE556E001609BC /* SwiftSyntax */; settings = {ATTRIBUTES = (Required, ); }; };
+		EF1C422927FE556E001609BC /* SwiftSyntaxBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = EF1C422827FE556E001609BC /* SwiftSyntaxBuilder */; };
+		EF1C422B27FE556E001609BC /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = EF1C422A27FE556E001609BC /* SwiftSyntaxParser */; };
+		EF1C422D27FE56FD001609BC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C422C27FE56FD001609BC /* Node.swift */; };
+		EF1C422F27FE571C001609BC /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C422E27FE571C001609BC /* Kind.swift */; };
+		EF930C5D2800C7E00010A81C /* FunctionSignatureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */; };
+		EF930C602800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */; };
+		EF930C612800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +28,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		EF930C622800CC260010A81C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF930C612800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF1C421B27FE53CA001609BC /* SyntaxRewriter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SyntaxRewriter; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1C421E27FE53CA001609BC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EF1C422C27FE56FD001609BC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		EF1C422E27FE571C001609BC /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionSignatureHelper.swift; sourceTree = "<group>"; };
+		EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = lib_InternalSwiftSyntaxParser.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/lib_InternalSwiftSyntaxParser.dylib; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1C422B27FE556E001609BC /* SwiftSyntaxParser in Frameworks */,
+				EF930C602800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib in Frameworks */,
+				EF1C422727FE556E001609BC /* SwiftSyntax in Frameworks */,
+				EF1C422927FE556E001609BC /* SwiftSyntaxBuilder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +70,7 @@
 			children = (
 				EF1C421D27FE53CA001609BC /* SyntaxRewriter */,
 				EF1C421C27FE53CA001609BC /* Products */,
+				EF930C5E2800CC250010A81C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +86,19 @@
 			isa = PBXGroup;
 			children = (
 				EF1C421E27FE53CA001609BC /* main.swift */,
+				EF930C5C2800C7DF0010A81C /* FunctionSignatureHelper.swift */,
+				EF1C422C27FE56FD001609BC /* Node.swift */,
+				EF1C422E27FE571C001609BC /* Kind.swift */,
 			);
 			path = SyntaxRewriter;
+			sourceTree = "<group>";
+		};
+		EF930C5E2800CC250010A81C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF930C5F2800CC260010A81C /* lib_InternalSwiftSyntaxParser.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,12 +111,18 @@
 				EF1C421727FE53CA001609BC /* Sources */,
 				EF1C421827FE53CA001609BC /* Frameworks */,
 				EF1C421927FE53CA001609BC /* CopyFiles */,
+				EF930C622800CC260010A81C /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SyntaxRewriter;
+			packageProductDependencies = (
+				EF1C422627FE556E001609BC /* SwiftSyntax */,
+				EF1C422827FE556E001609BC /* SwiftSyntaxBuilder */,
+				EF1C422A27FE556E001609BC /* SwiftSyntaxParser */,
+			);
 			productName = SyntaxRewriter;
 			productReference = EF1C421B27FE53CA001609BC /* SyntaxRewriter */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +151,9 @@
 				Base,
 			);
 			mainGroup = EF1C421227FE53CA001609BC;
+			packageReferences = (
+				EF1C422527FE556E001609BC /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			productRefGroup = EF1C421C27FE53CA001609BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF930C5D2800C7E00010A81C /* FunctionSignatureHelper.swift in Sources */,
 				EF1C421F27FE53CA001609BC /* main.swift in Sources */,
+				EF1C422D27FE56FD001609BC /* Node.swift in Sources */,
+				EF1C422F27FE571C001609BC /* Kind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +335,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF1C422527FE556E001609BC /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF1C422627FE556E001609BC /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1C422527FE556E001609BC /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+		EF1C422827FE556E001609BC /* SwiftSyntaxBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1C422527FE556E001609BC /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntaxBuilder;
+		};
+		EF1C422A27FE556E001609BC /* SwiftSyntaxParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1C422527FE556E001609BC /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntaxParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF1C421327FE53CA001609BC /* Project object */;
 }

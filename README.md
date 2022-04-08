@@ -163,7 +163,7 @@ bodyBuilder: {
 
 ### Improvements and comments
 
-- currently it seems like open modifier is not available (yet) so i’ve used public
+- currently it seems like open modifier is not available [(yet)](https://github.com/apple/swift/pull/42260) so i’ve used public
 - i’m still questioning and investigating how/where the linting should be applied, for example:
 
 ```swift
